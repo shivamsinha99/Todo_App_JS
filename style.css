@@ -98,3 +98,38 @@ form button:hover {
     transform: translateX(-20rem);
     opacity: 0;
 }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #927dff;
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.6rem;
+}
+
+.select {
+    margin: 0.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    color: #927dff;
+    background: white;
+    top: 0;
+    right: 0;
+    padding: 0.6rem;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+
+.select:hover::after {
+    background: #927dff;
+    color: white;
+}
